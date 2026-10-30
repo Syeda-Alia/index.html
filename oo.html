@@ -1,0 +1,364 @@
+```html
+<html>
+<head>
+
+    <title>Student Registration System</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #eaf4ff;
+            font-family: Arial, sans-serif;
+            color: #123b5d;
+        }
+
+        #header {
+            background-color: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #menu {
+            background-color: #0d47a1;
+            text-align: center;
+            padding: 12px;
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        #menu a:hover {
+            background-color: #64b5f6;
+            color: #062b4c;
+        }
+
+        #content {
+            text-align: center;
+            padding: 40px;
+            min-height: 450px;
+        }
+
+        .form-box {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            border: 2px solid #1976d2;
+            padding: 25px;
+        }
+
+        .form-box h2 {
+            color: #0d47a1;
+        }
+
+        .form-group {
+            margin: 15px;
+        }
+
+        .form-group label {
+            display: inline-block;
+            width: 140px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            background-color: grey;
+            color: white;
+            padding: 8px;
+            border: 1px solid #0d47a1;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            background-color: #b0bec5;
+        }
+
+        .button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0d47a1;
+        }
+
+        #license {
+            background-color: #dbeeff;
+            border: 1px solid #1976d2;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        #license h3 {
+            color: #0d47a1;
+            text-align: center;
+        }
+
+        #register-link {
+            margin-top: 20px;
+        }
+
+        #register-link a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+
+        #register-link a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+
+        #thankyou {
+            margin-top: 150px;
+            position: relative;
+            animation: moveText 5s linear infinite;
+        }
+
+        #thankyou h1 {
+            color: #1565c0;
+        }
+
+        @keyframes moveText {
+            from {
+                left: -300px;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+
+        #footer {
+            background-color: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        #login:target,
+        #register:target,
+        #thankyou:target {
+            display: block;
+        }
+
+        #login {
+            display: block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+
+<div id="login" class="page">
+
+    <div id="header">
+        <h1>Student Registration System</h1>
+    </div>
+
+    <div id="menu">
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+    </div>
+
+    <div id="content">
+
+        <div class="form-box">
+
+            <h2>Login</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Login" class="button">
+                </div>
+
+            </form>
+
+            <div id="register-link">
+                <p>Don't have an account?</p>
+                <a href="#register">Register Now</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>Student Registration System</p>
+    </div>
+
+</div>
+
+
+<!-- REGISTER PAGE -->
+
+<div id="register" class="page">
+
+    <div id="header">
+        <h1>Student Registration System</h1>
+    </div>
+
+    <div id="menu">
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+    </div>
+
+    <div id="content">
+
+        <div class="form-box">
+
+            <h2>Student Registration Form</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Login Name:</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password">
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password:</label>
+                    <input type="password">
+                </div>
+
+                <div class="form-group">
+
+                    <label>Gender:</label>
+
+                    <input type="radio" name="gender">
+                    Male
+
+                    <input type="radio" name="gender">
+                    Female
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Country:</label>
+
+                    <select>
+                        <option>Pakistan</option>
+                        <option>India</option>
+                        <option>China</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>Italy</option>
+                    </select>
+
+                </div>
+
+
+                <div id="license">
+
+                    <h3>License Agreement</h3>
+
+                    <p>I agree to provide correct information.</p>
+
+                    <p>I agree to follow the rules and regulations.</p>
+
+                    <p>I understand that my information will be used for registration.</p>
+
+                    <p>I accept the terms and conditions.</p>
+
+                    <input type="checkbox">
+
+                    I agree to the license agreement.
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input type="submit"
+                           value="Register"
+                           class="button">
+
+                    <input type="reset"
+                           value="Clear"
+                           class="button">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>Student Registration System</p>
+    </div>
+
+</div>
+
+
+<!-- THANK YOU PAGE -->
+
+<div id="thankyou" class="page">
+
+    <div id="header">
+        <h1>Student Registration System</h1>
+    </div>
+
+    <div id="menu">
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+    </div>
+
+    <div id="content">
+
+        <div id="thankyou">
+
+            <h1>Thank You!</h1>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>Student Registration System</p>
+    </div>
+
+</div>
+
+</body>
+</html>
+```
